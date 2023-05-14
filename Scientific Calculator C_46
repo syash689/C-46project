@@ -1,0 +1,140 @@
+#include <stdio.h>
+#include <math.h>
+
+// Function to perform addition
+double add(double a, double b) {
+    return a + b;
+}
+
+// Function to perform subtraction
+double subtract(double a, double b) {
+    return a - b;
+}
+
+// Function to perform multiplication
+double multiply(double a, double b) {
+    return a * b;
+}
+
+// Function to perform division
+double divide(double a, double b) {
+    return a / b;
+}
+
+// Function to calculate square root
+double squareRoot(double a) {
+    return sqrt(a);
+}
+
+// Function to calculate power
+double power(double a, double b) {
+    return pow(a, b);
+}
+
+// Function to calculate sine
+double sine(double a) {
+    return sin(a);
+}
+
+// Function to calculate cosine
+double cosine(double a) {
+    return cos(a);
+}
+
+// Function to calculate logarithm
+double logarithm(double a) {
+    return log10(a);
+}
+
+// Function to calculate exponential
+double exponential(double a) {
+    return exp(a);
+}
+
+int main() {
+    double num1, num2, result;
+    int choice;
+
+    printf("Scientific Calculator\n");
+    printf("---------------------\n");
+    printf("1. Addition\n");
+    printf("2. Subtraction\n");
+    printf("3. Multiplication\n");
+    printf("4. Division\n");
+    printf("5. Square root\n");
+    printf("6. Power\n");
+    printf("7. Sine\n");
+    printf("8. Cosine\n");
+    printf("9. Logarithm\n");
+    printf("10. Exponential\n");
+    printf("Enter your choice (1-10): ");
+    scanf("%d", &choice);
+
+    switch (choice) {
+        case 1:
+            printf("Enter two numbers: ");
+            scanf("%lf %lf", &num1, &num2);
+            result = add(num1, num2);
+            printf("Result: %.2lf\n", result);
+            break;
+        case 2:
+            printf("Enter two numbers: ");
+            scanf("%lf %lf", &num1, &num2);
+            result = subtract(num1, num2);
+            printf("Result: %.2lf\n", result);
+            break;
+        case 3:
+            printf("Enter two numbers: ");
+            scanf("%lf %lf", &num1, &num2);
+            result = multiply(num1, num2);
+            printf("Result: %.2lf\n", result);
+            break;
+        case 4:
+            printf("Enter two numbers: ");
+            scanf("%lf %lf", &num1, &num2);
+            result = divide(num1, num2);
+            printf("Result: %.2lf\n", result);
+            break;
+        case 5:
+            printf("Enter a number: ");
+            scanf("%lf", &num1);
+            result = squareRoot(num1);
+            printf("Result: %.2lf\n", result);
+            break;
+        case 6:
+            printf("Enter two numbers: ");
+            scanf("%lf %lf", &num1, &num2);
+            result = power(num1, num2);
+            printf("Result: %.2lf\n", result);
+            break;
+        case 7:
+            printf("Enter an angle in radians: ");
+            scanf("%lf", &num1);
+            result = sine(num1);
+            printf("Result: %.2lf\n", result);
+            break;
+        case 8:
+            printf("Enter an angle in radians: ");
+            scanf("%lf", &num1);
+            result = cosine(num1);
+            printf("Result: %.2lf\n", result);
+            break;
+        case 9:
+            printf("Enter a number: ");
+            scanf("%lf", &num1);
+            result = logarithm(num1);
+            printf("Result: %.2lf\n", result);
+            break;
+        case 10:
+            printf("Enter a number: ");
+            scanf("%lf", &num1);
+            result = exponential(num1);
+            printf("Result: %.2lf\n", result);
+            break;
+            
+        default:
+            printf("Invalid choice.\n");
+    }
+
+    return 0;
+}
